@@ -119,6 +119,15 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
     
 
 
+    <!-- http://www.opensilex.org/vocabulary/oeso#concerns -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso#concerns">
+        <rdfs:label xml:lang="fr">concerne</rdfs:label>
+        <rdfs:label xml:lang="en">concerns</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.opensilex.org/vocabulary/oeso#dateOfLastCalibration -->
 
     <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso#dateOfLastCalibration">
