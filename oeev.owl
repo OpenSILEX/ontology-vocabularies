@@ -71,9 +71,6 @@ The event Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/by
         <Class IRI="#EvolutiveMaintenance"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://www.phenome-fppn.fr/vocabulary/m3p/2015#hasDocument"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#CurativeTreatment"/>
     </Declaration>
     <Declaration>
@@ -89,10 +86,10 @@ The event Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/by
         <ObjectProperty abbreviatedIRI="time:hasTime"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Sowing"/>
+        <DataProperty IRI="#isConfidential"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#isConfidential"/>
+        <Class IRI="#Sowing"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Start"/>
@@ -113,6 +110,9 @@ The event Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/by
         <Class IRI="#Fertilization"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasDocument"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#AddingProduct"/>
     </Declaration>
     <Declaration>
@@ -125,13 +125,13 @@ The event Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/by
         <Class IRI="#PhenologyScoring"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#ScientificObjectManagement"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Irrigation"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#fromIP"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ScientificObjectManagement"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Trouble"/>
@@ -972,6 +972,11 @@ The event Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/by
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDocument</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has document</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasPest</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has pest</Literal>
     </AnnotationAssertion>
@@ -1004,11 +1009,6 @@ The event Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/by
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#to</IRI>
         <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">vers</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.phenome-fppn.fr/vocabulary/m3p/2015#hasDocument</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has document</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
