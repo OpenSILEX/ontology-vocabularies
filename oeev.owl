@@ -1,1023 +1,692 @@
 <?xml version="1.0"?>
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+<rdf:RDF xmlns="http://www.opensilex.org/vocabulary/oeev#"
      xml:base="http://www.opensilex.org/vocabulary/oeev"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://www.opensilex.org/vocabulary/oeev">
-    <Prefix name="" IRI="http://www.opensilex.org/vocabulary/oeev"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
-    <Annotation>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Anne Tireau, Llorenç Cabrera-Bosquet, Pascal Neveu (INRA Montpellier)</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Version 3.0 (2019-01-16) created by INRA - MISTEA - LEPSE</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">OpenSILEX - Ontology of Experimental Events (OEEv)</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">INRA MISTEA
+     xmlns:time="http://www.w3.org/2006/time#">
+    <owl:Ontology rdf:about="http://www.opensilex.org/vocabulary/oeev">
+        <dc:creator>Anne Tireau, Llorenç Cabrera-Bosquet, Pascal Neveu (INRA Montpellier)</dc:creator>
+        <rdfs:comment>INRA MISTEA
 Copyright © - INRA - 2014 - 2019
-The event Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/by-sa/4.0/legalcode)</Literal>
-    </Annotation>
-    <Declaration>
-        <Class IRI="#Event"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Staking"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#leafStage"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MoveTo"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Treatment"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Displacement"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#StuckPlant"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#from"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Calibration"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Thinning"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#concerns"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Reparation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#EvolutiveMaintenance"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#CurativeTreatment"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#emergence"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#anthesis"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Restart"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="time:hasTime"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#isConfidential"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Sowing"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Start"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasPest"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Clipping"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Operability"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PreventativeTreatment"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Fertilization"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasDocument"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#AddingProduct"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Pest"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Sampling"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PhenologyScoring"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ScientificObjectManagement"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Irrigation"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#fromIP"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Trouble"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FacilityManagement"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Incident"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#silking"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Harvesting"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#AutomaticCalibration"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Lodging"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Servicing"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/source"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#fromDevice"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Cleaning"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Checking"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Installation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#to"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#CorrectiveMaintenance"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Loading"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PestAttack"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Potting"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Dysfunction"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PotFall"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ManualCalibration"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Detasseling"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Stop"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Breakdown"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#MoveFrom"/>
-    </Declaration>
-    <SubClassOf>
-        <Class IRI="#AddingProduct"/>
-        <Class IRI="#ScientificObjectManagement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#AutomaticCalibration"/>
-        <Class IRI="#Calibration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Breakdown"/>
-        <Class IRI="#Trouble"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Calibration"/>
-        <Class IRI="#FacilityManagement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Checking"/>
-        <Class IRI="#Servicing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Cleaning"/>
-        <Class IRI="#Servicing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Clipping"/>
-        <Class IRI="#ScientificObjectManagement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#CorrectiveMaintenance"/>
-        <Class IRI="#Operability"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#CurativeTreatment"/>
-        <Class IRI="#Treatment"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Detasseling"/>
-        <Class IRI="#ScientificObjectManagement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Displacement"/>
-        <Class IRI="#Event"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Dysfunction"/>
-        <Class IRI="#Trouble"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#EvolutiveMaintenance"/>
-        <Class IRI="#Operability"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#FacilityManagement"/>
-        <Class IRI="#Event"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Fertilization"/>
-        <Class IRI="#AddingProduct"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Harvesting"/>
-        <Class IRI="#ScientificObjectManagement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Incident"/>
-        <Class IRI="#Trouble"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Installation"/>
-        <Class IRI="#FacilityManagement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Irrigation"/>
-        <Class IRI="#ScientificObjectManagement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Loading"/>
-        <Class IRI="#ScientificObjectManagement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Lodging"/>
-        <Class IRI="#Incident"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ManualCalibration"/>
-        <Class IRI="#Calibration"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#MoveFrom"/>
-        <Class IRI="#Displacement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#MoveFrom"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="#from"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#MoveTo"/>
-        <Class IRI="#Displacement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Operability"/>
-        <Class IRI="#FacilityManagement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#PestAttack"/>
-        <Class IRI="#Incident"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#PhenologyScoring"/>
-        <Class IRI="#ScientificObjectManagement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#PotFall"/>
-        <Class IRI="#Incident"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Potting"/>
-        <Class IRI="#ScientificObjectManagement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#PreventativeTreatment"/>
-        <Class IRI="#Treatment"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Reparation"/>
-        <Class IRI="#CorrectiveMaintenance"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Restart"/>
-        <Class IRI="#FacilityManagement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Sampling"/>
-        <Class IRI="#ScientificObjectManagement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ScientificObjectManagement"/>
-        <Class IRI="#Event"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Servicing"/>
-        <Class IRI="#Operability"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Sowing"/>
-        <Class IRI="#ScientificObjectManagement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Staking"/>
-        <Class IRI="#ScientificObjectManagement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Start"/>
-        <Class IRI="#FacilityManagement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Stop"/>
-        <Class IRI="#FacilityManagement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#StuckPlant"/>
-        <Class IRI="#Incident"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Thinning"/>
-        <Class IRI="#ScientificObjectManagement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Treatment"/>
-        <Class IRI="#ScientificObjectManagement"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Trouble"/>
-        <Class IRI="#Event"/>
-    </SubClassOf>
-    <DisjointClasses>
-        <Class IRI="#Displacement"/>
-        <Class IRI="#FacilityManagement"/>
-        <Class IRI="#ScientificObjectManagement"/>
-        <Class IRI="#Trouble"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#MoveFrom"/>
-        <Class IRI="#MoveTo"/>
-    </DisjointClasses>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasPest"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <FunctionalObjectProperty>
-        <ObjectProperty IRI="#from"/>
-    </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
-        <ObjectProperty IRI="#to"/>
-    </FunctionalObjectProperty>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#concerns"/>
-        <Class IRI="#Event"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#from"/>
-        <Class IRI="#MoveFrom"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasPest"/>
-        <Class IRI="#PestAttack"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#to"/>
-        <Class IRI="#MoveTo"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasPest"/>
-        <Class IRI="#Pest"/>
-    </ObjectPropertyRange>
-    <DisjointObjectProperties>
-        <ObjectProperty IRI="#from"/>
-        <ObjectProperty IRI="#to"/>
-    </DisjointObjectProperties>
-    <FunctionalDataProperty>
-        <DataProperty IRI="#isConfidential"/>
-    </FunctionalDataProperty>
-    <DataPropertyRange>
-        <DataProperty IRI="#isConfidential"/>
-        <Datatype abbreviatedIRI="xsd:boolean"/>
-    </DataPropertyRange>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#AddingProduct</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Adding product</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#AddingProduct</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ajout de produit</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#AutomaticCalibration</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Automatic calibration</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#AutomaticCalibration</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Calibration automatique</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Breakdown</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Breakdown</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Breakdown</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Panne</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Calibration</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Calibration</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Calibration</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Calibration</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Checking</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Révision</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Checking</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Checking</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Checking</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Révision</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Cleaning</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cleaning</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Cleaning</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Nettoyage</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Clipping</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Clipping</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Clipping</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ecrêtage</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#CorrectiveMaintenance</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Corrective maintenance</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#CorrectiveMaintenance</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Maintenance correctrice</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#CurativeTreatment</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Curative treatment</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#CurativeTreatment</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Traitement curatif</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Detasseling</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Detasseling</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Displacement</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Event describing the displacement in time and space of the different objects participating in experiments. For instance, plants are often transferred, during a single experiment, between installations or compartments with different environmental conditions. Similarly, sensors can be replaced or moved to different positions in the field or greenhouse.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Displacement</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Evénement de déplacement général objet scientifique, équipement, etc.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Displacement</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Displacement</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Displacement</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Déplacement</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Dysfunction</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Dysfunction</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Dysfunction</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Dysfunctionnement</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Event</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Evenement lie a un objet</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Event</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Event linked to an object involved in an experiment</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Event</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Event</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Event</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Evénement</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#EvolutiveMaintenance</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Evolutive maintenance</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#EvolutiveMaintenance</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Maintenance évolutive</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#FacilityManagement</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Refers to the set of actions related to the management and maintenance infrastructure and supporting equipment.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#FacilityManagement</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Facility management</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#FacilityManagement</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gestion d&apos;équipement</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Fertilization</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fertilization</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Harvesting</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Harvesting</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Harvesting</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Récolte</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Incident</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Agit sur un objet scientifique</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Incident</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Concerns a scientific object</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Incident</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Incident</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Incident</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Incident</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Installation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Installation of devices</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Irrigation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Irrigation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Irrigation</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Irrigation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Loading</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Chargement</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Loading</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Loading</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>#Lodging</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">skos:closeMatch http://www.cropontology.org/rdf/CO_323:0000021</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Lodging</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lodging</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Lodging</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Verse</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#ManualCalibration</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Calibration manuel</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#ManualCalibration</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Manual calibration</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#MoveFrom</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Déplacement depuis</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#MoveFrom</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Move from</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#MoveTo</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Déplacement vers</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#MoveTo</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Move to</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Operability</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Operability</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Operability</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Opérabilité</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <IRI>#Pest</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">skos:closeMatch http://www.cropontology.org/rdf/CO_715:0000216</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Pest</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Pest type</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Pest</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Type de ravageur</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#PestAttack</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Attaque de ravageurs</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#PestAttack</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Pest attack</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#PhenologyScoring</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Observed phenology</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#PotFall</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Chute du pot</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#PotFall</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Pot fall</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Potting</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Empotage</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Potting</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Potting</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#PreventativeTreatment</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Preventive treatment</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#PreventativeTreatment</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Traitement preventif</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Reparation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Repair</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Reparation</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Réparation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Restart</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Redémarrage</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Restart</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Restart</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Sampling</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Echantillonnage</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Sampling</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sampling</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#ScientificObjectManagement</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gestion d&apos;objet scientifique</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#ScientificObjectManagement</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Scientific object management</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Servicing</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Entretien révision...</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Servicing</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Entretien</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Servicing</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Servicing</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Sowing</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ensemencement</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Sowing</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sowing</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Staking</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Installation of plant tutors</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Staking</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tuteurage d&apos;une plante</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Staking</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Staking</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Staking</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tuteurage</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Start</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Démarrage</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Start</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Start</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Stop</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Arrêt</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Stop</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Stop</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#StuckPlant</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Plante bloquée</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#StuckPlant</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Stuck plant</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Thinning</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Eclaircissement</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Thinning</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thinning</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Treatment</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Traitement</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Treatment</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Treatment</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Trouble</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Problème</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Trouble</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Trouble</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#anthesis</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Anthesis</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#emergence</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Emergence</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#from</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depuis</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#from</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">From</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#fromDevice</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Config, descr du terminal si existe, cf scannex</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#fromDevice</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depuis le terminal</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#fromDevice</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">From device</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasDocument</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has document</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasPest</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has pest</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isConfidential</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">confidentiality</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isConfidential</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">confidentialité</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#leafStage</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">leaf stage</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#silking</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">silking</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#to</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">to</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#to</IRI>
-        <Literal xml:lang="fr" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">vers</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>time:hasTime</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has time</Literal>
-    </AnnotationAssertion>
-</Ontology>
+The event Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/by-sa/4.0/legalcode)</rdfs:comment>
+        <rdfs:label xml:lang="en">OpenSILEX - Ontology of Experimental Events (OEEv)</rdfs:label>
+        <owl:versionInfo>Version 3.0 (2019-01-16) created by INRA - MISTEA - LEPSE</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#concerns -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeev#concerns">
+        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeev#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#from -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeev#from">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeev#MoveFrom"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opensilex.org/vocabulary/oeev#to"/>
+        <rdfs:label xml:lang="fr">Depuis</rdfs:label>
+        <rdfs:label xml:lang="en">From</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#hasDocument -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeev#hasDocument">
+        <rdfs:label xml:lang="en">has document</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#hasPest -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeev#hasPest">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeev#PestAttack"/>
+        <rdfs:range rdf:resource="http://www.opensilex.org/vocabulary/oeev#Pest"/>
+        <rdfs:label xml:lang="en">has pest</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#to -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeev#to">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeev#MoveTo"/>
+        <rdfs:label xml:lang="en">to</rdfs:label>
+        <rdfs:label xml:lang="fr">vers</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasTime">
+        <rdfs:label xml:lang="en">has time</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#fromDevice -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeev#fromDevice">
+        <rdfs:label xml:lang="fr">Config, descr du terminal si existe, cf scannex</rdfs:label>
+        <rdfs:label xml:lang="fr">Depuis le terminal</rdfs:label>
+        <rdfs:label xml:lang="en">From device</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#fromIP -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeev#fromIP"/>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#isConfidential -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeev#isConfidential">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">confidentiality</rdfs:label>
+        <rdfs:label xml:lang="fr">confidentialité</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#AddingProduct -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#AddingProduct">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#ScientificObjectManagement"/>
+        <rdfs:label xml:lang="en">Adding product</rdfs:label>
+        <rdfs:label xml:lang="fr">Ajout de produit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#AutomaticCalibration -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#AutomaticCalibration">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#Calibration"/>
+        <rdfs:label xml:lang="en">Automatic calibration</rdfs:label>
+        <rdfs:label xml:lang="fr">Calibration automatique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Breakdown -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Breakdown">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#Trouble"/>
+        <rdfs:label xml:lang="en">Breakdown</rdfs:label>
+        <rdfs:label xml:lang="fr">Panne</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Calibration -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Calibration">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#FacilityManagement"/>
+        <rdfs:label xml:lang="en">Calibration</rdfs:label>
+        <rdfs:label xml:lang="fr">Calibration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Checking -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Checking">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#Servicing"/>
+        <rdfs:comment>Révision</rdfs:comment>
+        <rdfs:label xml:lang="en">Checking</rdfs:label>
+        <rdfs:label xml:lang="fr">Révision</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Cleaning -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Cleaning">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#Servicing"/>
+        <rdfs:label xml:lang="en">Cleaning</rdfs:label>
+        <rdfs:label xml:lang="fr">Nettoyage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Clipping -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Clipping">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#ScientificObjectManagement"/>
+        <rdfs:label xml:lang="en">Clipping</rdfs:label>
+        <rdfs:label xml:lang="fr">Ecrêtage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#CorrectiveMaintenance -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#CorrectiveMaintenance">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#Operability"/>
+        <rdfs:label xml:lang="en">Corrective maintenance</rdfs:label>
+        <rdfs:label xml:lang="fr">Maintenance correctrice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#CurativeTreatment -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#CurativeTreatment">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#Treatment"/>
+        <rdfs:label xml:lang="en">Curative treatment</rdfs:label>
+        <rdfs:label xml:lang="fr">Traitement curatif</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Detasseling -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Detasseling">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#ScientificObjectManagement"/>
+        <rdfs:label xml:lang="en">Detasseling</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Displacement -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Displacement">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#Event"/>
+        <rdfs:comment xml:lang="en">Event describing the displacement in time and space of the different objects participating in experiments. For instance, plants are often transferred, during a single experiment, between installations or compartments with different environmental conditions. Similarly, sensors can be replaced or moved to different positions in the field or greenhouse.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Evénement de déplacement général objet scientifique, équipement, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Displacement</rdfs:label>
+        <rdfs:label xml:lang="fr">Déplacement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Dysfunction -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Dysfunction">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#Trouble"/>
+        <rdfs:label xml:lang="en">Dysfunction</rdfs:label>
+        <rdfs:label xml:lang="fr">Dysfunctionnement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Event -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Event">
+        <rdfs:comment xml:lang="fr">Evenement lie a un objet</rdfs:comment>
+        <rdfs:comment xml:lang="en">Event linked to an object involved in an experiment</rdfs:comment>
+        <rdfs:label xml:lang="en">Event</rdfs:label>
+        <rdfs:label xml:lang="fr">Evénement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#EvolutiveMaintenance -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#EvolutiveMaintenance">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#Operability"/>
+        <rdfs:label xml:lang="en">Evolutive maintenance</rdfs:label>
+        <rdfs:label xml:lang="fr">Maintenance évolutive</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#FacilityManagement -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#FacilityManagement">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#Event"/>
+        <rdfs:comment xml:lang="en">Refers to the set of actions related to the management and maintenance infrastructure and supporting equipment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Facility management</rdfs:label>
+        <rdfs:label xml:lang="fr">Gestion d&apos;équipement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Fertilization -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Fertilization">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#AddingProduct"/>
+        <rdfs:label xml:lang="en">Fertilization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Harvesting -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Harvesting">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#ScientificObjectManagement"/>
+        <rdfs:label xml:lang="en">Harvesting</rdfs:label>
+        <rdfs:label xml:lang="fr">Récolte</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Incident -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Incident">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#Trouble"/>
+        <rdfs:comment>Agit sur un objet scientifique</rdfs:comment>
+        <rdfs:comment xml:lang="en">Concerns a scientific object</rdfs:comment>
+        <rdfs:label xml:lang="en">Incident</rdfs:label>
+        <rdfs:label xml:lang="fr">Incident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Installation -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Installation">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#FacilityManagement"/>
+        <rdfs:label xml:lang="en">Installation of devices</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Irrigation -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Irrigation">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#ScientificObjectManagement"/>
+        <rdfs:label xml:lang="en">Irrigation</rdfs:label>
+        <rdfs:label xml:lang="fr">Irrigation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Loading -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Loading">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#ScientificObjectManagement"/>
+        <rdfs:label xml:lang="fr">Chargement</rdfs:label>
+        <rdfs:label xml:lang="en">Loading</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Lodging -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Lodging">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#Incident"/>
+        <rdfs:isDefinedBy>skos:closeMatch http://www.cropontology.org/rdf/CO_323:0000021</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Lodging</rdfs:label>
+        <rdfs:label xml:lang="fr">Verse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#ManualCalibration -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#ManualCalibration">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#Calibration"/>
+        <rdfs:label xml:lang="fr">Calibration manuel</rdfs:label>
+        <rdfs:label xml:lang="en">Manual calibration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#MoveFrom -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#MoveFrom">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#Displacement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opensilex.org/vocabulary/oeev#from"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.opensilex.org/vocabulary/oeev#MoveTo"/>
+        <rdfs:label xml:lang="fr">Déplacement depuis</rdfs:label>
+        <rdfs:label xml:lang="en">Move from</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#MoveTo -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#MoveTo">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#Displacement"/>
+        <rdfs:label xml:lang="fr">Déplacement vers</rdfs:label>
+        <rdfs:label xml:lang="en">Move to</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Operability -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Operability">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#FacilityManagement"/>
+        <rdfs:label xml:lang="en">Operability</rdfs:label>
+        <rdfs:label xml:lang="fr">Opérabilité</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Pest -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Pest">
+        <rdfs:isDefinedBy>skos:closeMatch http://www.cropontology.org/rdf/CO_715:0000216</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Pest type</rdfs:label>
+        <rdfs:label xml:lang="fr">Type de ravageur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#PestAttack -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#PestAttack">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#Incident"/>
+        <rdfs:label xml:lang="fr">Attaque de ravageurs</rdfs:label>
+        <rdfs:label xml:lang="en">Pest attack</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#PhenologyScoring -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#PhenologyScoring">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#ScientificObjectManagement"/>
+        <rdfs:label xml:lang="en">Observed phenology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#PotFall -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#PotFall">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#Incident"/>
+        <rdfs:label xml:lang="fr">Chute du pot</rdfs:label>
+        <rdfs:label xml:lang="en">Pot fall</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Potting -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Potting">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#ScientificObjectManagement"/>
+        <rdfs:label xml:lang="fr">Empotage</rdfs:label>
+        <rdfs:label xml:lang="en">Potting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#PreventativeTreatment -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#PreventativeTreatment">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#Treatment"/>
+        <rdfs:label xml:lang="en">Preventive treatment</rdfs:label>
+        <rdfs:label xml:lang="fr">Traitement preventif</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Reparation -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Reparation">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#CorrectiveMaintenance"/>
+        <rdfs:label xml:lang="en">Repair</rdfs:label>
+        <rdfs:label xml:lang="fr">Réparation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Restart -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Restart">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#FacilityManagement"/>
+        <rdfs:label xml:lang="fr">Redémarrage</rdfs:label>
+        <rdfs:label xml:lang="en">Restart</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Sampling -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Sampling">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#ScientificObjectManagement"/>
+        <rdfs:label xml:lang="fr">Echantillonnage</rdfs:label>
+        <rdfs:label xml:lang="en">Sampling</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#ScientificObjectManagement -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#ScientificObjectManagement">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#Event"/>
+        <rdfs:label xml:lang="fr">Gestion d&apos;objet scientifique</rdfs:label>
+        <rdfs:label xml:lang="en">Scientific object management</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Servicing -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Servicing">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#Operability"/>
+        <rdfs:comment>Entretien révision...</rdfs:comment>
+        <rdfs:label xml:lang="fr">Entretien</rdfs:label>
+        <rdfs:label xml:lang="en">Servicing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Sowing -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Sowing">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#ScientificObjectManagement"/>
+        <rdfs:label xml:lang="fr">Ensemencement</rdfs:label>
+        <rdfs:label xml:lang="en">Sowing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Staking -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Staking">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#ScientificObjectManagement"/>
+        <rdfs:comment xml:lang="en">Installation of plant tutors</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Tuteurage d&apos;une plante</rdfs:comment>
+        <rdfs:label xml:lang="en">Staking</rdfs:label>
+        <rdfs:label xml:lang="fr">Tuteurage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Start -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Start">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#FacilityManagement"/>
+        <rdfs:label xml:lang="fr">Démarrage</rdfs:label>
+        <rdfs:label xml:lang="en">Start</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Stop -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Stop">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#FacilityManagement"/>
+        <rdfs:label xml:lang="fr">Arrêt</rdfs:label>
+        <rdfs:label xml:lang="en">Stop</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#StuckPlant -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#StuckPlant">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#Incident"/>
+        <rdfs:label xml:lang="fr">Plante bloquée</rdfs:label>
+        <rdfs:label xml:lang="en">Stuck plant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Thinning -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Thinning">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#ScientificObjectManagement"/>
+        <rdfs:label xml:lang="fr">Eclaircissement</rdfs:label>
+        <rdfs:label xml:lang="en">Thinning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Treatment -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Treatment">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#ScientificObjectManagement"/>
+        <rdfs:label xml:lang="fr">Traitement</rdfs:label>
+        <rdfs:label xml:lang="en">Treatment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#Trouble -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#Trouble">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#Event"/>
+        <rdfs:label xml:lang="fr">Problème</rdfs:label>
+        <rdfs:label xml:lang="en">Trouble</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#anthesis -->
+
+    <owl:NamedIndividual rdf:about="http://www.opensilex.org/vocabulary/oeev#anthesis">
+        <rdfs:label xml:lang="en">Anthesis</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#emergence -->
+
+    <owl:NamedIndividual rdf:about="http://www.opensilex.org/vocabulary/oeev#emergence">
+        <rdfs:label xml:lang="en">Emergence</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#leafStage -->
+
+    <owl:NamedIndividual rdf:about="http://www.opensilex.org/vocabulary/oeev#leafStage">
+        <rdfs:label xml:lang="en">leaf stage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#silking -->
+
+    <owl:NamedIndividual rdf:about="http://www.opensilex.org/vocabulary/oeev#silking">
+        <rdfs:label xml:lang="en">silking</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeev#Displacement"/>
+            <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeev#FacilityManagement"/>
+            <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeev#ScientificObjectManagement"/>
+            <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeev#Trouble"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
 
