@@ -13,13 +13,14 @@
      xmlns:object="http://www.mistea.supagro.inra.fr/object#">
     <owl:Ontology rdf:about="http://www.opensilex.org/vocabulary/oeso">
         <owl:versionIRI rdf:resource="http://www.opensilex.org/vocabulary/oeso"/>
+        <owl:versionInfo>New version of 3.0.2 release  http://www.phenome-fppn.fr/vocabulary/2018/oepo</owl:versionInfo>
         <rdfs:seeAlso>http://www.phenome-fppn.fr/vocabulary/2018/oepo</rdfs:seeAlso>
+        <owl:versionInfo>Version 2.0 (2019-02-11) created by INRA</owl:versionInfo>
         <rdfs:comment>INRA MISTEA
 Copyright © - INRA - 2014 - 2019
 The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/by/4.0/legalcode)</rdfs:comment>
         <rdfs:label>OpenSILEX - Ontology for Experimental Scientific Objects (OESO)</rdfs:label>
         <rdfs:comment>Authors : Anne TIREAU, Llorenç CABRERA-BOSQUET, Morgane VIDAL, Pascal NEVEU</rdfs:comment>
-        <owl:versionInfo>Version 1.8 (2019-01-16) created by INRA</owl:versionInfo>
     </owl:Ontology>
     
 
