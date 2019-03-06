@@ -1699,6 +1699,15 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
     
 
 
+    <!-- http://www.opensilex.org/vocabulary/oeso#Provenance -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Provenance">
+        <rdfs:label xml:lang="en">provenance</rdfs:label>
+        <rdfs:label xml:lang="fr">provenance</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.opensilex.org/vocabulary/oeso#Pyranometer -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Pyranometer">
@@ -1843,8 +1852,8 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
     <!-- http://www.opensilex.org/vocabulary/oeso#ScientificObject -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#ScientificObject">
-        <rdfs:label xml:lang="en">agronomical object</rdfs:label>
-        <rdfs:label xml:lang="fr">objet agronomique</rdfs:label>
+        <rdfs:label xml:lang="fr">objet scientifique</rdfs:label>
+        <rdfs:label xml:lang="en">scientific object</rdfs:label>
     </owl:Class>
     
 
