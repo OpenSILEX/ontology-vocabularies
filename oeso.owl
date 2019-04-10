@@ -2294,6 +2294,19 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
     
 
 
+    <!-- http://www.opensilex.org/vocabulary/oeso#spikelet -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#spikelet">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
+        <dc:source>skos:exactMatch http://www.ontobee.org/ontology/PO?iri=http://purl.obolibrary.org/obo/PO_0009051</dc:source>
+        <rdfs:comment xml:lang="en">PO:0009051 One to many closely-packed flowers and associated glumes</rdfs:comment>
+        <rdfs:comment xml:lang="fr">PO:0009051 Regroupement de une ou plusieurs fleurs dans une enveloppe commune composée de glumes</rdfs:comment>
+        <rdfs:label xml:lang="en">spikelet</rdfs:label>
+        <rdfs:label xml:lang="fr">épillet</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.opensilex.org/vocabulary/oeso#stem -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#stem">
