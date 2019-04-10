@@ -568,6 +568,16 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
     
 
 
+    <!-- http://www.opensilex.org/vocabulary/oeso#hasModel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso#hasModel">
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#deviceProperty"/>
+        <rdfs:label xml:lang="en">Model</rdfs:label>
+        <rdfs:label xml:lang="fr">Modèle</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.opensilex.org/vocabulary/oeso#hasRadiometricTargetMaterial -->
 
     <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso#hasRadiometricTargetMaterial">
@@ -2387,8 +2397,8 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/language">
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
-        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#language-007"/>
         <rdfs:label xml:lang="en">Language</rdfs:label>
         <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646].</terms:description>
