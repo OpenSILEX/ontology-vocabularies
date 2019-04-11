@@ -2294,6 +2294,20 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
     
 
 
+    <!-- http://www.opensilex.org/vocabulary/oeso#ear -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#ear">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
+        <dc:source>&lt;http://www.w3.org/2008/05/skos#broader&gt;&lt;http://purl.obolibrary.org/obo/PO_0020136&gt;</dc:source>
+        <dc:source>&lt;http://www.w3.org/2008/05/skos#broader&gt;&lt;http://purl.obolibrary.org/obo/PO_0025597&gt;</dc:source>
+        <rdfs:comment xml:lang="en">In Zea genus, either an ear inflorescence that is a pistillate inflorescence, highly compacted and bearing the ear spikelets, either an ear infruitescence, bearing kernels (i.e. fruits) and developping from the ear inflorescence.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Inflorescence ou infruitescence femelle pour le genre Zea.</rdfs:comment>
+        <rdfs:label xml:lang="en">ear</rdfs:label>
+        <rdfs:label xml:lang="fr">épi</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.opensilex.org/vocabulary/oeso#spikelet -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#spikelet">
