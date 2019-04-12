@@ -1874,7 +1874,6 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Seed">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
         <dc:source>skos:exactMatch http://www.ontobee.org/ontology/rdf/PO?iri=http://purl.obolibrary.org/obo/PO_0009010</dc:source>
-        <dc:source>skos:narrower http://purl.obolibrary.org/obo/PO_0009001</dc:source>
         <rdfs:comment xml:lang="en">A multi-tissue plant  structure (PO:0025496) that develops from a plant ovule   (PO:0020003) and has as parts a plant embryo (PO:0009009)  enclosed in a seed coat (PO:0009088). [database_cross_reference: POC:curators]</rdfs:comment>
         <rdfs:comment xml:lang="fr">Une graine ou un fruit particulier présentant un péricarpe rudimentaire ne contenant qu&apos;une seule graine dans le cas des espèces de la famille des Poacées.</rdfs:comment>
         <rdfs:label xml:lang="fr">graine</rdfs:label>
