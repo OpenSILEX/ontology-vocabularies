@@ -1879,7 +1879,6 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
         <rdfs:comment xml:lang="fr">Une graine ou un fruit particulier présentant un péricarpe rudimentaire ne contenant qu&apos;une seule graine dans le cas des espèces de la famille des Poacées.</rdfs:comment>
         <rdfs:label xml:lang="fr">graine</rdfs:label>
         <rdfs:label xml:lang="en">seed</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">Kernel</rdfs:seeAlso>
     </owl:Class>
     
 
