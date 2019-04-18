@@ -2305,30 +2305,6 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
     
 
 
-
-    
-
-
-
-    
-
-
-
-    
-
-
-
-    
-
-
-
-    
-
-
-
-    
-
-
     <!-- http://xmlns.com/foaf/0.1/Agent -->
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
