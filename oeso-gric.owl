@@ -2342,7 +2342,7 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
 
     <!-- http://www.opensilex.org/vocabulary/oeso#stem -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#stem">
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Stem">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
         <dc:source>skos:exactMatch http://www.ontobee.org/ontology/PO?iri=http://purl.obolibrary.org/obo/PO_0009047</dc:source>
         <rdfs:comment xml:lang="en">Primary shoot axis of a plant (PO:0009047)</rdfs:comment>
