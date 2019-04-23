@@ -2355,7 +2355,7 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
 
     <!-- http://www.opensilex.org/vocabulary/oeso#tassel -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#tassel">
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Tassel">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
         <dc:source>skos:exactMatch http://www.ontobee.org/ontology/PO?iri=http://purl.obolibrary.org/obo/PO_0020126</dc:source>
         <rdfs:comment xml:lang="fr">Inflorescence mâle (PO:0020126)</rdfs:comment>
