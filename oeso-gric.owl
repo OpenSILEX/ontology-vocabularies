@@ -2368,7 +2368,7 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
 
     <!-- http://www.opensilex.org/vocabulary/oeso#tiller -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#tiller">
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Tiller">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
         <dc:source>skos:exactMatch http://www.ontobee.org/ontology/PO?iri=http://purl.obolibrary.org/obo/PO_0005001</dc:source>
         <rdfs:comment xml:lang="en">Basal axillary shoot system (PO:0005001)</rdfs:comment>
