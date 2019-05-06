@@ -970,7 +970,7 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
     <!-- http://www.opensilex.org/vocabulary/oeso#CapacitanceSensor -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#CapacitanceSensor">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#HumitidySensor"/>
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#HumiditySensor"/>
         <dc:source>skos:closeMatch capacitance sensor [ET-AWS] http://www.hydrometeoindustry.org/Meetings2010/ET-AWS-6/Doc8[1]-AWS-MetadataCatalogues.pdf</dc:source>
         <rdfs:comment>certain materials interact with water vapour and undergo a change in capacitance, in relation to ambient humidity.</rdfs:comment>
         <rdfs:label xml:lang="en">capacitance sensor</rdfs:label>
@@ -1068,7 +1068,7 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
     <!-- http://www.opensilex.org/vocabulary/oeso#ElectricSensorWhichExploitsTheConductivityVariationAsAFunctionOfWetness -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#ElectricSensorWhichExploitsTheConductivityVariationAsAFunctionOfWetness">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#HumitidySensor"/>
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#HumiditySensor"/>
         <dc:source>skos:closeMatch electric sensor, which exploits the conductivity variation as a function of wetness [GAMP 2.4.1.6.3] http://www.wmo.int/pages/prog/wcp/agm/gamp/gamp_en.html</dc:source>
         <rdfs:label xml:lang="en">electric sensor, which exploits the conductivity variation as a function of wetness</rdfs:label>
     </owl:Class>
@@ -1078,7 +1078,7 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
     <!-- http://www.opensilex.org/vocabulary/oeso#ElectricalResistanceBlock -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#ElectricalResistanceBlock">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#HumitidySensor"/>
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#HumiditySensor"/>
         <dc:source>skos:closeMatch Electrical resistance block [GAMP 2.4.1.6.2] http://www.wmo.int/pages/prog/wcp/agm/gamp/gamp_en.html</dc:source>
         <rdfs:label xml:lang="en">electrical resistance block</rdfs:label>
     </owl:Class>
@@ -1088,7 +1088,7 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
     <!-- http://www.opensilex.org/vocabulary/oeso#ElectricalResistanceHumiditySensor -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#ElectricalResistanceHumiditySensor">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#HumitidySensor"/>
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#HumiditySensor"/>
         <dc:source>skos:closeMatch electrical resistance humidity sensor [ET-AWS] http://www.hydrometeoindustry.org/Meetings2010/ET-AWS-6/Doc8[1]-AWS-MetadataCatalogues.pdf</dc:source>
         <rdfs:comment>certain materials interact with water vapour and undergo a change in electrical resistance, in relation to ambient humidity.</rdfs:comment>
         <rdfs:label xml:lang="en">electrical resistance humidity sensor</rdfs:label>
@@ -1304,9 +1304,9 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso#HumitidySensor -->
+    <!-- http://www.opensilex.org/vocabulary/oeso#HumiditySensor -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#HumitidySensor">
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#HumiditySensor">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#SensingDevice"/>
         <rdfs:label xml:lang="fr">capteur d&apos;humidité</rdfs:label>
         <rdfs:label xml:lang="en">humidity sensor</rdfs:label>
@@ -2091,7 +2091,7 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
     <!-- http://www.opensilex.org/vocabulary/oeso#Tensiometer -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Tensiometer">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#HumitidySensor"/>
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#HumiditySensor"/>
         <dc:source>skos:closeMatch Tensiometer [GAMP 2.4.1.6.2] http://www.wmo.int/pages/prog/wcp/agm/gamp/gamp_en.html</dc:source>
         <rdfs:label xml:lang="en">tensiometer</rdfs:label>
     </owl:Class>
@@ -2349,8 +2349,8 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
         <rdfs:label xml:lang="en">Creator</rdfs:label>
         <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
-        <terms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</terms:description>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</terms:description>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#creator-006"/>
         <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
@@ -2381,14 +2381,14 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
         <rdfs:label xml:lang="en">Format</rdfs:label>
         <rdfs:comment xml:lang="en">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#format-007"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
         <terms:description xml:lang="en">Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME].</terms:description>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/identifier">
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#identifier-006"/>
-        <terms:description xml:lang="en">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. </terms:description>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:description xml:lang="en">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. </terms:description>
         <rdfs:comment xml:lang="en">An unambiguous reference to the resource within a given context.</rdfs:comment>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
@@ -2403,8 +2403,8 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
         <rdfs:label xml:lang="en">Language</rdfs:label>
         <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646].</terms:description>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
-        <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc4646.txt"/>
         <rdfs:comment xml:lang="en">A language of the resource.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc4646.txt"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/publisher">
         <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
@@ -2412,8 +2412,8 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
         <rdfs:label xml:lang="en">Publisher</rdfs:label>
-        <terms:description xml:lang="en">Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.</terms:description>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:description xml:lang="en">Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.</terms:description>
         <rdfs:comment xml:lang="en">An entity responsible for making the resource available.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/relation">
@@ -2421,8 +2421,8 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
         <terms:description xml:lang="en">Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. </terms:description>
         <rdfs:label xml:lang="en">Relation</rdfs:label>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
-        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
         <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </rdf:Description>
@@ -2456,14 +2456,14 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/type">
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#type-006"/>
         <rdfs:comment xml:lang="en">The nature or genre of the resource.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#type-006"/>
         <rdfs:label xml:lang="en">Type</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
         <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
         <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso#dateOfLastCalibration">
         <rdfs:label xml:lang="fr">date de la dernière calibration</rdfs:label>
