@@ -988,8 +988,6 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="fr">Un caryopse (PO:0030104) est un fruit (PO:0009001) qui se développe à partir d&apos;un pistil (PO:0009062) et qui à maturité comprend un épicarpe (PO:0009085) sec, un mésocarpe (PO:0009087) sec et un endocarpe (PO:0009086) sec qui sont soudés au tégument (PO:0009088).</rdfs:isDefinedBy>
         <rdfs:label xml:lang="fr">caryopse</rdfs:label>
         <rdfs:label xml:lang="en">caryopsis</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">Plant Ontology term : caryopsis fruit</rdfs:seeAlso>
-        <rdfs:seeAlso xml:lang="en">kernel</rdfs:seeAlso>
     </owl:Class>
     
 
