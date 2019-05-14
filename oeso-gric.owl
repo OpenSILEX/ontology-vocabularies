@@ -2313,7 +2313,7 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
 
     <!-- http://www.opensilex.org/vocabulary/oeso#grain -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#grain">
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Grain">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
         <dc:source>skos:exactMatch http://purl.obolibrary.org/obo/PO_0030104</dc:source>
         <rdfs:comment xml:lang="en">Caryopsis fruit (PO:0030104) is characteristic of the Poaceae (the grass family). Caryopsis fruits develop from a pseudomonomerous gyneocium (PO:0009062), and contain only a single seed due to the abortion of two of the three carpels (PO:0009030). The pericarp of caryopsis fruits of some bamboo species is somewhat fleshy at maturity and is fused to the seed coat; these fruits are referred to in the literature as bacoid caryopses. Examples: barley (Hordeum vulgare), rice (Oryza spp.), wheat (Triticum spp.), corn (Zea mays), sorghum (Sorghum bicolor), oat (Avena spp.), zebra grass (Miscanthus spp.), Tausch’s goatgrass (Aegilops tauschii), stiff brome (Brachypodium distachyon), cutgrass (Leersia perrieri), and foxtail millet (Setaria italica).</rdfs:comment>
@@ -2329,7 +2329,7 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
 
     <!-- http://www.opensilex.org/vocabulary/oeso#spikelet -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#spikelet">
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Spikelet">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
         <dc:source>skos:exactMatch http://www.ontobee.org/ontology/PO?iri=http://purl.obolibrary.org/obo/PO_0009051</dc:source>
         <rdfs:comment xml:lang="en">PO:0009051 One to many closely-packed flowers and associated glumes</rdfs:comment>
@@ -2342,7 +2342,7 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
 
     <!-- http://www.opensilex.org/vocabulary/oeso#stem -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#stem">
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Stem">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
         <dc:source>skos:exactMatch http://www.ontobee.org/ontology/PO?iri=http://purl.obolibrary.org/obo/PO_0009047</dc:source>
         <rdfs:comment xml:lang="en">Primary shoot axis of a plant (PO:0009047)</rdfs:comment>
@@ -2355,7 +2355,7 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
 
     <!-- http://www.opensilex.org/vocabulary/oeso#tassel -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#tassel">
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Tassel">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
         <dc:source>skos:exactMatch http://www.ontobee.org/ontology/PO?iri=http://purl.obolibrary.org/obo/PO_0020126</dc:source>
         <rdfs:comment xml:lang="fr">Inflorescence mâle (PO:0020126)</rdfs:comment>
@@ -2368,7 +2368,7 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
 
     <!-- http://www.opensilex.org/vocabulary/oeso#tiller -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#tiller">
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Tiller">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
         <dc:source>skos:exactMatch http://www.ontobee.org/ontology/PO?iri=http://purl.obolibrary.org/obo/PO_0005001</dc:source>
         <rdfs:comment xml:lang="en">Basal axillary shoot system (PO:0005001)</rdfs:comment>
