@@ -960,7 +960,7 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
     <!-- http://www.opensilex.org/vocabulary/oeso#CapacitanceSensor -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#CapacitanceSensor">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#HumitidySensor"/>
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#HumiditySensor"/>
         <dc:source>skos:closeMatch capacitance sensor [ET-AWS] http://www.hydrometeoindustry.org/Meetings2010/ET-AWS-6/Doc8[1]-AWS-MetadataCatalogues.pdf</dc:source>
         <rdfs:comment>certain materials interact with water vapour and undergo a change in capacitance, in relation to ambient humidity.</rdfs:comment>
         <rdfs:label xml:lang="en">capacitance sensor</rdfs:label>
@@ -1058,7 +1058,7 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
     <!-- http://www.opensilex.org/vocabulary/oeso#ElectricSensorWhichExploitsTheConductivityVariationAsAFunctionOfWetness -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#ElectricSensorWhichExploitsTheConductivityVariationAsAFunctionOfWetness">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#HumitidySensor"/>
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#HumiditySensor"/>
         <dc:source>skos:closeMatch electric sensor, which exploits the conductivity variation as a function of wetness [GAMP 2.4.1.6.3] http://www.wmo.int/pages/prog/wcp/agm/gamp/gamp_en.html</dc:source>
         <rdfs:label xml:lang="en">electric sensor, which exploits the conductivity variation as a function of wetness</rdfs:label>
     </owl:Class>
@@ -1068,7 +1068,7 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
     <!-- http://www.opensilex.org/vocabulary/oeso#ElectricalResistanceBlock -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#ElectricalResistanceBlock">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#HumitidySensor"/>
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#HumiditySensor"/>
         <dc:source>skos:closeMatch Electrical resistance block [GAMP 2.4.1.6.2] http://www.wmo.int/pages/prog/wcp/agm/gamp/gamp_en.html</dc:source>
         <rdfs:label xml:lang="en">electrical resistance block</rdfs:label>
     </owl:Class>
@@ -1078,7 +1078,7 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
     <!-- http://www.opensilex.org/vocabulary/oeso#ElectricalResistanceHumiditySensor -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#ElectricalResistanceHumiditySensor">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#HumitidySensor"/>
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#HumiditySensor"/>
         <dc:source>skos:closeMatch electrical resistance humidity sensor [ET-AWS] http://www.hydrometeoindustry.org/Meetings2010/ET-AWS-6/Doc8[1]-AWS-MetadataCatalogues.pdf</dc:source>
         <rdfs:comment>certain materials interact with water vapour and undergo a change in electrical resistance, in relation to ambient humidity.</rdfs:comment>
         <rdfs:label xml:lang="en">electrical resistance humidity sensor</rdfs:label>
@@ -1294,9 +1294,9 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso#HumitidySensor -->
+    <!-- http://www.opensilex.org/vocabulary/oeso#HumiditySensor -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#HumitidySensor">
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#HumiditySensor">
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#SensingDevice"/>
         <rdfs:label xml:lang="fr">capteur d&apos;humidité</rdfs:label>
         <rdfs:label xml:lang="en">humidity sensor</rdfs:label>
@@ -2082,7 +2082,7 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
     <!-- http://www.opensilex.org/vocabulary/oeso#Tensiometer -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Tensiometer">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#HumitidySensor"/>
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#HumiditySensor"/>
         <dc:source>skos:closeMatch Tensiometer [GAMP 2.4.1.6.2] http://www.wmo.int/pages/prog/wcp/agm/gamp/gamp_en.html</dc:source>
         <rdfs:label xml:lang="en">tensiometer</rdfs:label>
     </owl:Class>
