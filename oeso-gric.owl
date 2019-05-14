@@ -978,6 +978,22 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
     
 
 
+    <!-- http://www.opensilex.org/vocabulary/oeso#Caryopsis -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Caryopsis">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
+        <dc:source>skos:exactMatch http://purl.obolibrary.org/obo/PO_0030104</dc:source>
+        <rdfs:comment xml:lang="en">Caryopsis fruit (PO:0030104) is characteristic of the Poaceae (the grass family). Caryopsis fruits develop from a pseudomonomerous gyneocium (PO:0009062), and contain only a single seed due to the abortion of two of the three carpels (PO:0009030). The pericarp of caryopsis fruits of some bamboo species is somewhat fleshy at maturity and is fused to the seed coat; these fruits are referred to in the literature as bacoid caryopses. Examples: barley (Hordeum vulgare), rice (Oryza spp.), wheat (Triticum spp.), corn (Zea mays), sorghum (Sorghum bicolor), oat (Avena spp.), zebra grass (Miscanthus spp.), Tausch’s goatgrass (Aegilops tauschii), stiff brome (Brachypodium distachyon), cutgrass (Leersia perrieri), and foxtail millet (Setaria italica).</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">A fruit (PO:0009001) which develops from a gynoecium (PO:0009062) and at maturity comprises a dry exocarp (PO:0009085), dry mesocarp (PO:0009087), and dry endocarp (PO:0009086) that are fused to a seed coat (PO:0009088).</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="fr">Un caryopse (PO:0030104) est un fruit (PO:0009001) qui se développe à partir d&apos;un pistil (PO:0009062) et qui à maturité comprend un épicarpe (PO:0009085) sec, un mésocarpe (PO:0009087) sec et un endocarpe (PO:0009086) sec qui sont soudés au tégument (PO:0009088).</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="fr">caryopse</rdfs:label>
+        <rdfs:label xml:lang="en">caryopsis</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">Plant Ontology term : caryopsis fruit</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">kernel</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- http://www.opensilex.org/vocabulary/oeso#Compartment -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Compartment">
@@ -1997,6 +2013,32 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
     
 
 
+    <!-- http://www.opensilex.org/vocabulary/oeso#Spikelet -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Spikelet">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
+        <dc:source>skos:exactMatch http://www.ontobee.org/ontology/PO?iri=http://purl.obolibrary.org/obo/PO_0009051</dc:source>
+        <rdfs:comment xml:lang="en">PO:0009051 One to many closely-packed flowers and associated glumes</rdfs:comment>
+        <rdfs:comment xml:lang="fr">PO:0009051 Regroupement de une ou plusieurs fleurs dans une enveloppe commune composée de glumes</rdfs:comment>
+        <rdfs:label xml:lang="en">spikelet</rdfs:label>
+        <rdfs:label xml:lang="fr">épillet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso#Stem -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Stem">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
+        <dc:source>skos:exactMatch http://www.ontobee.org/ontology/PO?iri=http://purl.obolibrary.org/obo/PO_0009047</dc:source>
+        <rdfs:comment xml:lang="en">Primary shoot axis of a plant (PO:0009047)</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Tige principale de la plante (PO:0009047)</rdfs:comment>
+        <rdfs:label xml:lang="en">stem</rdfs:label>
+        <rdfs:label xml:lang="fr">tige</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.opensilex.org/vocabulary/oeso#SurfaceTemperatureRadiometer -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#SurfaceTemperatureRadiometer">
@@ -2059,6 +2101,19 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
     
 
 
+    <!-- http://www.opensilex.org/vocabulary/oeso#Tassel -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Tassel">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
+        <dc:source>skos:exactMatch http://www.ontobee.org/ontology/PO?iri=http://purl.obolibrary.org/obo/PO_0020126</dc:source>
+        <rdfs:comment xml:lang="fr">Inflorescence mâle (PO:0020126)</rdfs:comment>
+        <rdfs:comment xml:lang="en">Tassel inflorescence (PO:0020126)</rdfs:comment>
+        <rdfs:label xml:lang="fr">panicule</rdfs:label>
+        <rdfs:label xml:lang="en">tassel</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.opensilex.org/vocabulary/oeso#TechnicalDocument -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#TechnicalDocument">
@@ -2107,6 +2162,19 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
         <dc:source>skos:closeMatch Thermocouple [GAMP 2.4.1.2] http://www.wmo.int/pages/prog/wcp/agm/gamp/gamp_en.html</dc:source>
         <rdfs:comment>Based on the generation of an electromotive force at the junction between two metals in contact, which is function of the temperature of the two metals</rdfs:comment>
         <rdfs:label xml:lang="en">thermocouple</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso#Tiller -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Tiller">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
+        <dc:source>skos:exactMatch http://www.ontobee.org/ontology/PO?iri=http://purl.obolibrary.org/obo/PO_0005001</dc:source>
+        <rdfs:comment xml:lang="en">Basal axillary shoot system (PO:0005001)</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Tiges principales et secondaires de la plante (PO:0005001)</rdfs:comment>
+        <rdfs:label xml:lang="fr">talle</rdfs:label>
+        <rdfs:label xml:lang="en">tiller</rdfs:label>
     </owl:Class>
     
 
@@ -2307,74 +2375,6 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
         <rdfs:comment xml:lang="fr">Inflorescence ou infruitescence femelle pour le genre Zea.</rdfs:comment>
         <rdfs:label xml:lang="en">ear</rdfs:label>
         <rdfs:label xml:lang="fr">épi</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.opensilex.org/vocabulary/oeso#grain -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Grain">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
-        <dc:source>skos:exactMatch http://purl.obolibrary.org/obo/PO_0030104</dc:source>
-        <rdfs:comment xml:lang="en">Caryopsis fruit (PO:0030104) is characteristic of the Poaceae (the grass family). Caryopsis fruits develop from a pseudomonomerous gyneocium (PO:0009062), and contain only a single seed due to the abortion of two of the three carpels (PO:0009030). The pericarp of caryopsis fruits of some bamboo species is somewhat fleshy at maturity and is fused to the seed coat; these fruits are referred to in the literature as bacoid caryopses. Examples: barley (Hordeum vulgare), rice (Oryza spp.), wheat (Triticum spp.), corn (Zea mays), sorghum (Sorghum bicolor), oat (Avena spp.), zebra grass (Miscanthus spp.), Tausch’s goatgrass (Aegilops tauschii), stiff brome (Brachypodium distachyon), cutgrass (Leersia perrieri), and foxtail millet (Setaria italica).</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">A fruit (PO:0009001) which develops from a gynoecium (PO:0009062) and at maturity comprises a dry exocarp (PO:0009085), dry mesocarp (PO:0009087), and dry endocarp (PO:0009086) that are fused to a seed coat (PO:0009088).</rdfs:isDefinedBy>
-        <rdfs:isDefinedBy xml:lang="fr">Un caryopse (PO:0030104) est un fruit (PO:0009001) qui se développe à partir d&apos;un pistil (PO:0009062) et qui à maturité comprend un épicarpe (PO:0009085) sec, un mésocarpe (PO:0009087) sec et un endocarpe (PO:0009086) sec qui sont soudés au tégument (PO:0009088).</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">grain</rdfs:label>
-        <rdfs:label xml:lang="fr">grain</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">Plant Ontology term : caryopsis fruit</rdfs:seeAlso>
-        <rdfs:seeAlso xml:lang="en">kernel</rdfs:seeAlso>
-    </owl:Class>
-    
-
-
-    <!-- http://www.opensilex.org/vocabulary/oeso#spikelet -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Spikelet">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
-        <dc:source>skos:exactMatch http://www.ontobee.org/ontology/PO?iri=http://purl.obolibrary.org/obo/PO_0009051</dc:source>
-        <rdfs:comment xml:lang="en">PO:0009051 One to many closely-packed flowers and associated glumes</rdfs:comment>
-        <rdfs:comment xml:lang="fr">PO:0009051 Regroupement de une ou plusieurs fleurs dans une enveloppe commune composée de glumes</rdfs:comment>
-        <rdfs:label xml:lang="en">spikelet</rdfs:label>
-        <rdfs:label xml:lang="fr">épillet</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.opensilex.org/vocabulary/oeso#stem -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Stem">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
-        <dc:source>skos:exactMatch http://www.ontobee.org/ontology/PO?iri=http://purl.obolibrary.org/obo/PO_0009047</dc:source>
-        <rdfs:comment xml:lang="en">Primary shoot axis of a plant (PO:0009047)</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Tige principale de la plante (PO:0009047)</rdfs:comment>
-        <rdfs:label xml:lang="en">stem</rdfs:label>
-        <rdfs:label xml:lang="fr">tige</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.opensilex.org/vocabulary/oeso#tassel -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Tassel">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
-        <dc:source>skos:exactMatch http://www.ontobee.org/ontology/PO?iri=http://purl.obolibrary.org/obo/PO_0020126</dc:source>
-        <rdfs:comment xml:lang="fr">Inflorescence mâle (PO:0020126)</rdfs:comment>
-        <rdfs:comment xml:lang="en">Tassel inflorescence (PO:0020126)</rdfs:comment>
-        <rdfs:label xml:lang="fr">panicule</rdfs:label>
-        <rdfs:label xml:lang="en">tassel</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.opensilex.org/vocabulary/oeso#tiller -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Tiller">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
-        <dc:source>skos:exactMatch http://www.ontobee.org/ontology/PO?iri=http://purl.obolibrary.org/obo/PO_0005001</dc:source>
-        <rdfs:comment xml:lang="en">Basal axillary shoot system (PO:0005001)</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Tiges principales et secondaires de la plante (PO:0005001)</rdfs:comment>
-        <rdfs:label xml:lang="fr">talle</rdfs:label>
-        <rdfs:label xml:lang="en">tiller</rdfs:label>
     </owl:Class>
     
 
