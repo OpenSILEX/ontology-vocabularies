@@ -771,6 +771,15 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
     
 
 
+    <!-- http://www.opensilex.org/vocabulary/oeso#hasShortname -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso#hasShortname">
+        <rdfs:comment xml:lang="fr">a pour acronyme</rdfs:comment>
+        <rdfs:comment xml:lang="en">has shortname</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.opensilex.org/vocabulary/oeso#height -->
 
     <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso#height">
