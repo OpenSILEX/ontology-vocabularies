@@ -1,0 +1,916 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.opensilex.org/vocabulary/oeso#"
+     xml:base="http://www.opensilex.org/vocabulary/oeso"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:object="http://www.mistea.supagro.inra.fr/object#"
+     xmlns:vocabulary="http://www.opensilex.org/vocabulary/oeso#">
+    <owl:Ontology rdf:about="http://www.opensilex.org/vocabulary/oeso-core">
+        <owl:versionIRI rdf:resource="http://www.opensilex.org/vocabulary/oeso-core"/>
+        <rdfs:comment>Authors : Anne TIREAU, Llorenç CABRERA-BOSQUET, Morgane VIDAL, Pascal NEVEU</rdfs:comment>
+        <rdfs:comment>INRA MISTEA
+Copyright © - INRA - 2014 - 2019
+The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/by/4.0/legalcode)</rdfs:comment>
+        <rdfs:label>OpenSILEX - Ontology for Experimental Scientific Objects (OESO)</rdfs:label>
+        <rdfs:seeAlso>http://www.phenome-fppn.fr/vocabulary/2018/oepo</rdfs:seeAlso>
+        <owl:versionInfo>New version of 3.0.2 release  http://www.phenome-fppn.fr/vocabulary/2018/oepo</owl:versionInfo>
+        <owl:versionInfo>Version 2.0 (2019-02-11) created by INRA</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source">
+        <terms:description xml:lang="en">The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#source-006"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A related resource from which the described resource is derived.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Source</rdfs:label>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasVersion"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#concerns -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#concerns">
+        <rdfs:label xml:lang="fr">concerne</rdfs:label>
+        <rdfs:label xml:lang="en">concerns</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasAdministrativeContact -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasAdministrativeContact">
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#hasContact"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Experiment"/>
+                    <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Project"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:label xml:lang="en">administrative contact</rdfs:label>
+        <rdfs:label xml:lang="fr">contact administratif</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasContact -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasContact">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:label xml:lang="en">contact</rdfs:label>
+        <rdfs:label xml:lang="fr">correspondant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasDocument -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasDocument">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Document"/>
+        <rdfs:label xml:lang="en">document</rdfs:label>
+        <rdfs:label xml:lang="fr">document</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasExperiment -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasExperiment">
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#hasPart"/>
+        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Project"/>
+        <rdfs:range rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Experiment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasMethod -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasMethod">
+        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Variable"/>
+        <rdfs:range rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Method"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasPart">
+        <owl:inverseOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#isPartOf"/>
+        <rdfs:label xml:lang="fr">a pour part</rdfs:label>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasProjectCoordinator -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasProjectCoordinator">
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#hasContact"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Experiment"/>
+                    <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Project"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:label xml:lang="fr">coordinateur</rdfs:label>
+        <rdfs:label xml:lang="en">coordinator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasScientificContact -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasScientificContact">
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#hasContact"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Experiment"/>
+                    <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Project"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:label xml:lang="fr">contact scientifique</rdfs:label>
+        <rdfs:label xml:lang="en">scientific contact</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasScientificSupervisor -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasScientificSupervisor">
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#hasContact"/>
+        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Experiment"/>
+        <rdfs:label xml:lang="en">has scientific supervisor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasTechnicalContact -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasTechnicalContact">
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#hasContact"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Device"/>
+                    <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Experiment"/>
+                    <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Project"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:label xml:lang="fr">contact technique</rdfs:label>
+        <rdfs:label xml:lang="en">technical contact</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasTechnicalSupervisor -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasTechnicalSupervisor">
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#hasContact"/>
+        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Experiment"/>
+        <rdfs:label xml:lang="en">has technical supervisor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasTrait -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasTrait">
+        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Variable"/>
+        <rdfs:range rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Trait"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasUnit">
+        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Variable"/>
+        <rdfs:range rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Unit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#isPartOf">
+        <rdfs:label xml:lang="fr">est partie de</rdfs:label>
+        <rdfs:label xml:lang="en">is part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#measures -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#measures">
+        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#SensingDevice"/>
+        <rdfs:range rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Variable"/>
+        <rdfs:comment xml:lang="en">Represent the link between a sensing device which measures a variable</rdfs:comment>
+        <rdfs:label xml:lang="en">measures</rdfs:label>
+        <rdfs:label xml:lang="fr">mesure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#participatesIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#participatesIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:isDefinedBy>http://www.ontobee.org/ontology/rdf/RO?iri=http://purl.obolibrary.org/obo/RO_0000056</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">participates in</rdfs:label>
+        <rdfs:label xml:lang="fr">participe à</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#dateOfLastCalibration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#dateOfLastCalibration">
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#deviceProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#hasDate"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#dateOfPurchase -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#dateOfPurchase">
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#deviceProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#hasDate"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#deviceProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#deviceProperty"/>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasAcronym -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasAcronym">
+        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Project"/>
+        <rdfs:label xml:lang="fr">acronyme</rdfs:label>
+        <rdfs:label xml:lang="en">has acronym</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasBrand -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasBrand">
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#deviceProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasDate"/>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasExperimentModalities -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasExperimentModalities"/>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasModel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasModel">
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#deviceProperty"/>
+        <rdfs:label xml:lang="en">Model</rdfs:label>
+        <rdfs:label xml:lang="fr">Modèle</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasReplication -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasReplication">
+        <rdfs:label xml:lang="en">replication</rdfs:label>
+        <rdfs:label xml:lang="fr">répétition</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasSerialNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasSerialNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#deviceProperty"/>
+        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Device"/>
+        <rdfs:label xml:lang="fr">numéro de série</rdfs:label>
+        <rdfs:label xml:lang="en">serial number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#inServiceDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#inServiceDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#deviceProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#hasDate"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#personInCharge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#personInCharge">
+        <rdfs:label xml:lang="en">person in charge</rdfs:label>
+        <rdfs:label xml:lang="fr">responsable</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#status -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#status"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#Actuator -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Actuator">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Device"/>
+        <rdfs:label xml:lang="fr">actionneur</rdfs:label>
+        <rdfs:label xml:lang="en">actuator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#Area -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Area">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Equipement"/>
+        <rdfs:comment xml:lang="fr">Zone au sens large.
+Peut définir une zone au sens physique ou théorique</rdfs:comment>
+        <rdfs:label xml:lang="en">zone</rdfs:label>
+        <rdfs:label xml:lang="fr">zone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#DataFile -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#DataFile">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Document"/>
+        <rdfs:label xml:lang="en">data file</rdfs:label>
+        <rdfs:label xml:lang="fr">fichier de données</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#Device -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Device">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Equipement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#Document -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Document">
+        <rdfs:label xml:lang="en">document</rdfs:label>
+        <rdfs:label xml:lang="fr">document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#Equipement -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Equipement">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#ExperimentalCondition"/>
+        <rdfs:comment xml:lang="en">An INSTALLATION is the elementary level for data acquisition in a specific type of experiments. It stands for other frequently used terms such as ‘platform’, ‘facility’ or others.</rdfs:comment>
+        <rdfs:label xml:lang="en">equipment</rdfs:label>
+        <rdfs:label xml:lang="fr">équipement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#EuropeanInfrastructure -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#EuropeanInfrastructure">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Infrastructure"/>
+        <rdfs:comment xml:lang="en">The ESFRI listed project EMPHASIS aims at a synergistic development and long-term operation of plant phenotyping infrastructure in Europe (https://emphasis.plant-phenotyping.eu/) by developing tools and methods for multi-scale phenotyping, allowing one to analyze genotype performance and trait diversity in current and future European environmental conditions.</rdfs:comment>
+        <rdfs:label xml:lang="en">european infrastructure</rdfs:label>
+        <rdfs:label xml:lang="fr">infrastructure européenne</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#Experiment -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Experiment">
+        <rdfs:comment xml:lang="en">An EXPERIMENT is a planned activity carried out by a given set of persons on a given set of observation unit, like plants or microplots (see §2.1), involving a protocol, methods and a resulting dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">experiment</rdfs:label>
+        <rdfs:label xml:lang="fr">expérimentation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#ExperimentalCondition -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#ExperimentalCondition">
+        <dc:source>skos:closeMatch http://www.ontobee.org/ontology/rdf/PECO?iri=http://purl.obolibrary.org/obo/PECO_0007359</dc:source>
+        <rdfs:comment xml:lang="en">A set of environmental conditions, infrastructure and supporting equipment or resources necessary to conduct a given experiment and in which plants, plots or group of plants are raised</rdfs:comment>
+        <rdfs:label xml:lang="fr">contexte expérimental</rdfs:label>
+        <rdfs:label xml:lang="en">experimental context</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#Image -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Image">
+        <rdfs:label xml:lang="en">image</rdfs:label>
+        <rdfs:label xml:lang="fr">image</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#Infrastructure -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Infrastructure">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#ExperimentalCondition"/>
+        <rdfs:label xml:lang="en">infrastructure</rdfs:label>
+        <rdfs:label xml:lang="fr">infrastructure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#Installation -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Installation">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Infrastructure"/>
+        <rdfs:comment xml:lang="en">An INSTALLATION is the elementary level for data acquisition in a specific type of experiments. It stands for other frequently used terms such as ‘platform’, ‘facility’ or others.</rdfs:comment>
+        <rdfs:label xml:lang="en">installation</rdfs:label>
+        <rdfs:label xml:lang="fr">installation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#LocalInfrastructure -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#LocalInfrastructure">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Infrastructure"/>
+        <rdfs:comment xml:lang="en">A LOCAL INFRASTRUCTURE is a group of installations located in one site depending on one institution (or more), which share governance committees, a common (or at least highly interoperable) information system, common principles for cost calculation and pricing and a common tool for user access.</rdfs:comment>
+        <rdfs:label xml:lang="fr">infrastructure locale</rdfs:label>
+        <rdfs:label xml:lang="en">local infrastructure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#Method -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Method">
+        <rdfs:isDefinedBy>http://purl.org/ppeo/PPEO.owl#PPEO_000011</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">method</rdfs:label>
+        <rdfs:label xml:lang="fr">méthode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#Multimedia -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Multimedia">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Document"/>
+        <rdfs:label xml:lang="en">multimedia</rdfs:label>
+        <rdfs:label xml:lang="fr">multimedia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#NationalInfrastructure -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#NationalInfrastructure">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Infrastructure"/>
+        <rdfs:comment xml:lang="en">A NATIONAL INFRASTRUCTURE is an organized group of local infrastructures with governance recognised by national authorities (e.g. respective ministry or national structures).</rdfs:comment>
+        <rdfs:label xml:lang="fr">infrastructure nationale</rdfs:label>
+        <rdfs:label xml:lang="en">national infrastructure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#Platform -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Platform">
+        <rdfs:label xml:lang="fr">plateforme</rdfs:label>
+        <rdfs:label xml:lang="en">platform</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#Project -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Project">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#ExperimentalCondition"/>
+        <rdfs:comment xml:lang="en">PROJECT (e.g. EU or national projects) involves partners that are in charge of experiments performed in one or more local infrastructures.</rdfs:comment>
+        <rdfs:label xml:lang="en">project</rdfs:label>
+        <rdfs:label xml:lang="fr">projet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#ProtectiveStructure -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#ProtectiveStructure">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Equipement"/>
+        <rdfs:label xml:lang="en">protective structure</rdfs:label>
+        <rdfs:label xml:lang="fr">structure protectrice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#Provenance -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Provenance">
+        <rdfs:label xml:lang="en">provenance</rdfs:label>
+        <rdfs:label xml:lang="fr">provenance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#ScientificDocument -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#ScientificDocument">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Document"/>
+        <rdfs:label xml:lang="fr">document scientifique</rdfs:label>
+        <rdfs:label xml:lang="en">scientific document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#ScientificObject -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#ScientificObject">
+        <rdfs:label xml:lang="fr">objet scientifique</rdfs:label>
+        <rdfs:label xml:lang="en">scientific object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#SensingDevice -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#SensingDevice">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Device"/>
+        <rdfs:comment xml:lang="en">devices providing numerical data, e.g. environment sensors or cameras</rdfs:comment>
+        <rdfs:label xml:lang="en">sensing device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#TechnicalDocument -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#TechnicalDocument">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Document"/>
+        <rdfs:label xml:lang="fr">document technique</rdfs:label>
+        <rdfs:label xml:lang="en">technical document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#Trait -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Trait">
+        <rdfs:isDefinedBy>http://purl.org/ppeo/PPEO.owl#PPEO_000009</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">trait</rdfs:label>
+        <rdfs:label xml:lang="fr">trait</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#Treatment -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Treatment">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#ExperimentalCondition"/>
+        <rdfs:isDefinedBy>http://purl.org/ppeo/PPEO.owl#PPEO_000018</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="fr">traitement</rdfs:label>
+        <rdfs:label xml:lang="en">treatment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#Unit -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Unit">
+        <rdfs:isDefinedBy>http://purl.org/ppeo/PPEO.owl#PPEO_000012</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">unit</rdfs:label>
+        <rdfs:label xml:lang="fr">unité</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#Variable -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Variable">
+        <rdfs:label xml:lang="en">variable</rdfs:label>
+        <rdfs:label xml:lang="fr">variable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#Vector -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Vector">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Device"/>
+        <rdfs:comment xml:lang="en">devices that either transport plants to a given site for phenotyping, or carry sensors in a greenhouse (e.g. conveyor belt, gripping arm, robot) or in the field (e.g. UAV, gantry, field robot). By extension, a vector can also be a group of persons producing manual observations.</rdfs:comment>
+        <rdfs:label xml:lang="fr">vecteur</rdfs:label>
+        <rdfs:label xml:lang="en">vector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
+        <rdfs:label xml:lang="en">agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/">
+        <terms:publisher rdf:resource="http://purl.org/dc/aboutdcmi#DCMI"/>
+        <terms:title xml:lang="en">Dublin Core Metadata Element Set, Version 1.1</terms:title>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</terms:modified>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/contributor">
+        <rdfs:label xml:lang="en">Contributor</rdfs:label>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#contributor-006"/>
+        <rdfs:comment xml:lang="en">An entity responsible for making contributions to the resource.</rdfs:comment>
+        <terms:description xml:lang="en">Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity.</terms:description>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/coverage">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#coverage-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</rdfs:comment>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges.</terms:description>
+        <rdfs:label xml:lang="en">Coverage</rdfs:label>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Creator</rdfs:label>
+        <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
+        <terms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#creator-006"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:comment xml:lang="en">A point or period of time associated with an event in the lifecycle of the resource.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#date-006"/>
+        <rdfs:label xml:lang="en">Date</rdfs:label>
+        <terms:description xml:lang="en">Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF].</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+        <terms:description xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">An account of the resource.</rdfs:comment>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Description</rdfs:label>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#description-006"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/format">
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Format</rdfs:label>
+        <rdfs:comment xml:lang="en">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#format-007"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:description xml:lang="en">Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME].</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/identifier">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#identifier-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:description xml:lang="en">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. </terms:description>
+        <rdfs:comment xml:lang="en">An unambiguous reference to the resource within a given context.</rdfs:comment>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Identifier</rdfs:label>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/language">
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#language-007"/>
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646].</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:comment xml:lang="en">A language of the resource.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc4646.txt"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/publisher">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#publisher-006"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Publisher</rdfs:label>
+        <terms:description xml:lang="en">Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:comment xml:lang="en">An entity responsible for making the resource available.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/relation">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#relation-006"/>
+        <rdfs:label xml:lang="en">Relation</rdfs:label>
+        <terms:description xml:lang="en">Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. </terms:description>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#rights-006"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:description xml:lang="en">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.</terms:description>
+        <rdfs:label xml:lang="en">Rights</rdfs:label>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">Information about rights held in and over the resource.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/subject">
+        <terms:description xml:lang="en">Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary.</terms:description>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:label xml:lang="en">Subject</rdfs:label>
+        <rdfs:comment xml:lang="en">The topic of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</terms:modified>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#subject-007"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+        <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:label xml:lang="en">Title</rdfs:label>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#title-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/type">
+        <rdfs:comment xml:lang="en">The nature or genre of the resource.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#type-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:label xml:lang="en">Type</rdfs:label>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
