@@ -248,7 +248,7 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
     <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso#hasRelatedProject">
         <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso#Project"/>
         <rdfs:range rdf:resource="http://www.opensilex.org/vocabulary/oeso#Project"/>
-        <rdfs:label xml:lang="fr">est associé à</rdfs:label>
+        <rdfs:label xml:lang="fr">est un projet associé à</rdfs:label>
         <rdfs:label xml:lang="en">has related projet</rdfs:label>
     </owl:ObjectProperty>
     
