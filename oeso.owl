@@ -2437,7 +2437,7 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
     <!-- http://www.opensilex.org/vocabulary/oeso#internationalfunding -->
 
     <owl:NamedIndividual rdf:about="http://www.opensilex.org/vocabulary/oeso#internationalfunding">
-        <rdf:type rdf:resource="http://www.opensilex.org/vocabulary/oeso#FinancialSupport"/>
+        <rdf:type rdf:resource="http://www.opensilex.org/vocabulary/oeso#FinancialFunding"/>
         <rdfs:label xml:lang="en">International</rdfs:label>
         <rdfs:label xml:lang="fr">International</rdfs:label>
     </owl:NamedIndividual>
