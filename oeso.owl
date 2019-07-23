@@ -2035,7 +2035,7 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
 caractère de séparation : tabulation
 id : alias
 pourcentage de réflectance mesuré pour chaque longueur d’onde</rdfs:comment>
-        <rdfs:comment xml:lang="en">csv file with the following format :
+        <rdfs:comment xml:lang="en">csv file with the following format:
 1 header line : first column = &quot;id&quot;. The following columns are the wavelength (nm) that could be founded during the treatments
 separator : tabular
 id : alias
