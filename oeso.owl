@@ -198,11 +198,11 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso#hasFinancialSupport -->
+    <!-- http://www.opensilex.org/vocabulary/oeso#hasFinancialFunding -->
 
-    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso#hasFinancialSupport">
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso#hasFinancialFunding">
         <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso#Project"/>
-        <rdfs:range rdf:resource="http://www.opensilex.org/vocabulary/oeso#FinancialSupport"/>
+        <rdfs:range rdf:resource="http://www.opensilex.org/vocabulary/oeso#FinancialFunding"/>
     </owl:ObjectProperty>
     
 
@@ -1281,10 +1281,10 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso#FinancialSupport -->
+    <!-- http://www.opensilex.org/vocabulary/oeso#FinancialFunding -->
 
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#FinancialSupport">
-        <rdfs:label xml:lang="en">financial support</rdfs:label>
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#FinancialFunding">
+        <rdfs:label xml:lang="en">financial funding</rdfs:label>
         <rdfs:label xml:lang="fr">support financier</rdfs:label>
     </owl:Class>
     
@@ -2415,7 +2415,7 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso#anr -->
+    <!-- http://www.opensilex.org/vocabulary/oeso#anrsupport -->
 
     <owl:NamedIndividual rdf:about="http://www.opensilex.org/vocabulary/oeso#anrsupport">
         <rdf:type rdf:resource="http://www.opensilex.org/vocabulary/oeso#FinancialFunding"/>
@@ -2424,7 +2424,7 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso#european -->
+    <!-- http://www.opensilex.org/vocabulary/oeso#europeanfunding -->
 
     <owl:NamedIndividual rdf:about="http://www.opensilex.org/vocabulary/oeso#europeanfunding">
         <rdf:type rdf:resource="http://www.opensilex.org/vocabulary/oeso#FinancialFunding"/>
@@ -2434,7 +2434,7 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso#inra -->
+    <!-- http://www.opensilex.org/vocabulary/oeso#inrafunding -->
 
     <owl:NamedIndividual rdf:about="http://www.opensilex.org/vocabulary/oeso#inrafunding">
         <rdf:type rdf:resource="http://www.opensilex.org/vocabulary/oeso#FinancialFunding"/>
