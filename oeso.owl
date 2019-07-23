@@ -2410,7 +2410,7 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
 
     <owl:NamedIndividual rdf:about="http://www.opensilex.org/vocabulary/oeso#anr">
         <rdf:type rdf:resource="http://www.opensilex.org/vocabulary/oeso#FinancialSupport"/>
-        <rdfs:label xml:lang="en">ANR</rdfs:label>
+        <rdfs:label>ANR</rdfs:label>
     </owl:NamedIndividual>
     
 
