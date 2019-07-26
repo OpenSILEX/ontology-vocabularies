@@ -610,6 +610,7 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
         <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso#Project"/>
         <rdfs:label xml:lang="en">acronym</rdfs:label>
         <rdfs:label xml:lang="fr">acronyme</rdfs:label>
+        <owl:deprecated xml:lang="fr"></owl:deprecated>
     </owl:DatatypeProperty>
     
 
@@ -792,6 +793,15 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
         <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso#RadiometricTarget"/>
         <rdfs:label xml:lang="fr">Largeur du rectangle</rdfs:label>
         <rdfs:label xml:lang="en">Rectangle width</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso#hasShortname -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso#hasShortname">
+        <rdfs:label xml:lang="fr">acronyme</rdfs:label>
+        <rdfs:label xml:lang="en">shortname</rdfs:label>
     </owl:DatatypeProperty>
     
 
