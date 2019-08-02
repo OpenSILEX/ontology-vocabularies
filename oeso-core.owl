@@ -17,10 +17,10 @@
         <rdfs:comment>INRA MISTEA
 Copyright © - INRA - 2014 - 2019
 The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/by/4.0/legalcode)</rdfs:comment>
-        <rdfs:label>OpenSILEX - Ontology for Experimental Scientific Objects (OESO)</rdfs:label>
+        <rdfs:label>OpenSILEX - Ontology for Experimental Scientific Objects Core (OESO-core)</rdfs:label>
         <rdfs:seeAlso>http://www.phenome-fppn.fr/vocabulary/2018/oepo</rdfs:seeAlso>
         <owl:versionInfo>New version of 3.0.2 release  http://www.phenome-fppn.fr/vocabulary/2018/oepo</owl:versionInfo>
-        <owl:versionInfo>Version 2.0 (2019-02-11) created by INRA</owl:versionInfo>
+        <owl:versionInfo>Version 0.1 (2019-08-02) created by INRA</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -130,6 +130,34 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
     
 
 
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#dateOfLastCalibration -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#dateOfLastCalibration">
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#hasDate"/>
+        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#dateOfPurchase -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#dateOfPurchase">
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#hasDate"/>
+        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#endDate -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#endDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#hasDate"/>
+        <rdfs:label xml:lang="fr">date de fin</rdfs:label>
+        <rdfs:label xml:lang="en">end date</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.opensilex.org/vocabulary/oeso-core#hasAdministrativeContact -->
 
     <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasAdministrativeContact">
@@ -142,6 +170,7 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:label xml:lang="en">administrative contact</rdfs:label>
         <rdfs:label xml:lang="fr">contact administratif</rdfs:label>
     </owl:ObjectProperty>
@@ -155,6 +184,25 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:label xml:lang="en">contact</rdfs:label>
         <rdfs:label xml:lang="fr">correspondant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasCoordinator -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasCoordinator">
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#hasContact"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Experiment"/>
+                    <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Project"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:label xml:lang="fr">coordinateur</rdfs:label>
+        <rdfs:label xml:lang="en">coordinator</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -176,6 +224,19 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
         <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#hasPart"/>
         <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Project"/>
         <rdfs:range rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Experiment"/>
+        <rdfs:label xml:lang="en">experiment</rdfs:label>
+        <rdfs:label xml:lang="fr">expérimentation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasFinancialFunding -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasFinancialFunding">
+        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Project"/>
+        <rdfs:range rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#FinancialFunding"/>
+        <rdfs:label xml:lang="fr">financement</rdfs:label>
+        <rdfs:label xml:lang="en">financial funding</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -185,6 +246,8 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
     <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasMethod">
         <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Variable"/>
         <rdfs:range rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Method"/>
+        <rdfs:label xml:lang="en">method</rdfs:label>
+        <rdfs:label xml:lang="fr">méthode</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -199,20 +262,14 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasProjectCoordinator -->
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasRelatedProject -->
 
-    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasProjectCoordinator">
-        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#hasContact"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Experiment"/>
-                    <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Project"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:label xml:lang="fr">coordinateur</rdfs:label>
-        <rdfs:label xml:lang="en">coordinator</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasRelatedProject">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Project"/>
+        <rdfs:range rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Project"/>
+        <rdfs:label xml:lang="fr">projet associé</rdfs:label>
+        <rdfs:label xml:lang="en">related projet</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -229,6 +286,7 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:label xml:lang="fr">contact scientifique</rdfs:label>
         <rdfs:label xml:lang="en">scientific contact</rdfs:label>
     </owl:ObjectProperty>
@@ -240,7 +298,9 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
     <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasScientificSupervisor">
         <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#hasContact"/>
         <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Experiment"/>
-        <rdfs:label xml:lang="en">has scientific supervisor</rdfs:label>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:label xml:lang="en">scientific supervisor</rdfs:label>
+        <rdfs:label xml:lang="fr">superviseur scientifique</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -269,7 +329,8 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
     <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasTechnicalSupervisor">
         <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#hasContact"/>
         <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Experiment"/>
-        <rdfs:label xml:lang="en">has technical supervisor</rdfs:label>
+        <rdfs:label xml:lang="fr">superviseur technique</rdfs:label>
+        <rdfs:label xml:lang="en">technical supervisor</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -279,6 +340,8 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
     <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasTrait">
         <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Variable"/>
         <rdfs:range rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Trait"/>
+        <rdfs:label xml:lang="en">trait</rdfs:label>
+        <rdfs:label xml:lang="fr">trait</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -288,6 +351,26 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
     <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasUnit">
         <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Variable"/>
         <rdfs:range rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Unit"/>
+        <rdfs:label xml:lang="en">unit</rdfs:label>
+        <rdfs:label xml:lang="fr">unité</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasVariety -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasVariety">
+        <rdfs:label xml:lang="en">variety</rdfs:label>
+        <rdfs:label xml:lang="fr">variété</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#inServiceDate -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#inServiceDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#hasDate"/>
+        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Device"/>
     </owl:ObjectProperty>
     
 
@@ -297,6 +380,15 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
     <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#isPartOf">
         <rdfs:label xml:lang="fr">est partie de</rdfs:label>
         <rdfs:label xml:lang="en">is part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#measuredVariable -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#measuredVariable">
+        <rdfs:label xml:lang="en">measured variable</rdfs:label>
+        <rdfs:label xml:lang="fr">variable mesurée</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -324,6 +416,16 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
     
 
 
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#startDate -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#startDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#hasDate"/>
+        <rdfs:label xml:lang="fr">date de début</rdfs:label>
+        <rdfs:label xml:lang="en">start date</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -332,24 +434,6 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://www.opensilex.org/vocabulary/oeso-core#dateOfLastCalibration -->
-
-    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#dateOfLastCalibration">
-        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#deviceProperty"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#hasDate"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.opensilex.org/vocabulary/oeso-core#dateOfPurchase -->
-
-    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#dateOfPurchase">
-        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#deviceProperty"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#hasDate"/>
-    </owl:DatatypeProperty>
     
 
 
@@ -363,16 +447,9 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
 
     <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasAcronym">
         <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Project"/>
+        <rdfs:label xml:lang="en">acronym</rdfs:label>
         <rdfs:label xml:lang="fr">acronyme</rdfs:label>
-        <rdfs:label xml:lang="en">has acronym</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasBrand -->
-
-    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasBrand">
-        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#deviceProperty"/>
+        <owl:deprecated xml:lang="fr"></owl:deprecated>
     </owl:DatatypeProperty>
     
 
@@ -385,16 +462,38 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
 
     <!-- http://www.opensilex.org/vocabulary/oeso-core#hasExperimentModalities -->
 
-    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasExperimentModalities"/>
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasExperimentModalities">
+        <rdfs:label xml:lang="en">experimental modalities</rdfs:label>
+        <rdfs:label xml:lang="fr">modalité expérimentale</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasModel -->
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasFinancialReference -->
 
-    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasModel">
-        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#deviceProperty"/>
-        <rdfs:label xml:lang="en">Model</rdfs:label>
-        <rdfs:label xml:lang="fr">Modèle</rdfs:label>
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasFinancialReference">
+        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Project"/>
+        <rdfs:label xml:lang="en">financial reference</rdfs:label>
+        <rdfs:label xml:lang="fr">référence financière</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasKeyword -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasKeyword">
+        <rdfs:label xml:lang="en">keyword</rdfs:label>
+        <rdfs:label xml:lang="fr">mot-clé</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasObjective -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasObjective">
+        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Project"/>
+        <rdfs:label xml:lang="fr">objectif</rdfs:label>
+        <rdfs:label xml:lang="en">objective</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -408,22 +507,11 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasSerialNumber -->
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#hasShortname -->
 
-    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasSerialNumber">
-        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#deviceProperty"/>
-        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Device"/>
-        <rdfs:label xml:lang="fr">numéro de série</rdfs:label>
-        <rdfs:label xml:lang="en">serial number</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.opensilex.org/vocabulary/oeso-core#inServiceDate -->
-
-    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#inServiceDate">
-        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#deviceProperty"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#hasDate"/>
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasShortname">
+        <rdfs:label xml:lang="fr">acronyme</rdfs:label>
+        <rdfs:label xml:lang="en">shortname</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -439,7 +527,10 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
 
     <!-- http://www.opensilex.org/vocabulary/oeso-core#status -->
 
-    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#status"/>
+    <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso-core#status">
+        <rdfs:label xml:lang="en">status</rdfs:label>
+        <rdfs:label xml:lang="fr">status</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
@@ -514,17 +605,6 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso-core#EuropeanInfrastructure -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#EuropeanInfrastructure">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Infrastructure"/>
-        <rdfs:comment xml:lang="en">The ESFRI listed project EMPHASIS aims at a synergistic development and long-term operation of plant phenotyping infrastructure in Europe (https://emphasis.plant-phenotyping.eu/) by developing tools and methods for multi-scale phenotyping, allowing one to analyze genotype performance and trait diversity in current and future European environmental conditions.</rdfs:comment>
-        <rdfs:label xml:lang="en">european infrastructure</rdfs:label>
-        <rdfs:label xml:lang="fr">infrastructure européenne</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.opensilex.org/vocabulary/oeso-core#Experiment -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Experiment">
@@ -542,6 +622,24 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
         <rdfs:comment xml:lang="en">A set of environmental conditions, infrastructure and supporting equipment or resources necessary to conduct a given experiment and in which plants, plots or group of plants are raised</rdfs:comment>
         <rdfs:label xml:lang="fr">contexte expérimental</rdfs:label>
         <rdfs:label xml:lang="en">experimental context</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#FinancialFunding -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#FinancialFunding">
+        <rdfs:label xml:lang="en">financial funding</rdfs:label>
+        <rdfs:label xml:lang="fr">support financier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso-core#GermsplasmDescriptor -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#GermsplasmDescriptor">
+        <rdfs:label xml:lang="fr">Matériel Génétique</rdfs:label>
+        <rdfs:label xml:lang="en">germplasm descriptor information</rdfs:label>
     </owl:Class>
     
 
@@ -576,17 +674,6 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso-core#LocalInfrastructure -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#LocalInfrastructure">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Infrastructure"/>
-        <rdfs:comment xml:lang="en">A LOCAL INFRASTRUCTURE is a group of installations located in one site depending on one institution (or more), which share governance committees, a common (or at least highly interoperable) information system, common principles for cost calculation and pricing and a common tool for user access.</rdfs:comment>
-        <rdfs:label xml:lang="fr">infrastructure locale</rdfs:label>
-        <rdfs:label xml:lang="en">local infrastructure</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.opensilex.org/vocabulary/oeso-core#Method -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Method">
@@ -607,20 +694,10 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
     
 
 
-    <!-- http://www.opensilex.org/vocabulary/oeso-core#NationalInfrastructure -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#NationalInfrastructure">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Infrastructure"/>
-        <rdfs:comment xml:lang="en">A NATIONAL INFRASTRUCTURE is an organized group of local infrastructures with governance recognised by national authorities (e.g. respective ministry or national structures).</rdfs:comment>
-        <rdfs:label xml:lang="fr">infrastructure nationale</rdfs:label>
-        <rdfs:label xml:lang="en">national infrastructure</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.opensilex.org/vocabulary/oeso-core#Platform -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso-core#Platform">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso-core#Infrastructure"/>
         <rdfs:label xml:lang="fr">plateforme</rdfs:label>
         <rdfs:label xml:lang="en">platform</rdfs:label>
     </owl:Class>
@@ -770,10 +847,10 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/contributor">
         <rdfs:label xml:lang="en">Contributor</rdfs:label>
-        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#contributor-006"/>
-        <rdfs:comment xml:lang="en">An entity responsible for making contributions to the resource.</rdfs:comment>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
         <terms:description xml:lang="en">Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity.</terms:description>
+        <rdfs:comment xml:lang="en">An entity responsible for making contributions to the resource.</rdfs:comment>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
@@ -792,8 +869,8 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
         <rdfs:label xml:lang="en">Creator</rdfs:label>
         <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
-        <terms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</terms:description>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</terms:description>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#creator-006"/>
         <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
@@ -819,13 +896,13 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#description-006"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/format">
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
         <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
         <rdfs:label xml:lang="en">Format</rdfs:label>
         <rdfs:comment xml:lang="en">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#format-007"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#format-007"/>
         <terms:description xml:lang="en">Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME].</terms:description>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/identifier">
@@ -840,8 +917,8 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/language">
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
         <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#language-007"/>
         <rdfs:label xml:lang="en">Language</rdfs:label>
         <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646].</terms:description>
@@ -855,24 +932,24 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
         <rdfs:label xml:lang="en">Publisher</rdfs:label>
-        <terms:description xml:lang="en">Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.</terms:description>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:description xml:lang="en">Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.</terms:description>
         <rdfs:comment xml:lang="en">An entity responsible for making the resource available.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/relation">
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#relation-006"/>
-        <rdfs:label xml:lang="en">Relation</rdfs:label>
         <terms:description xml:lang="en">Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. </terms:description>
+        <rdfs:label xml:lang="en">Relation</rdfs:label>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
-        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
         <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#rights-006"/>
-        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
         <terms:description xml:lang="en">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.</terms:description>
         <rdfs:label xml:lang="en">Rights</rdfs:label>
@@ -905,8 +982,12 @@ Peut définir une zone au sens physique ou théorique</rdfs:comment>
         <rdfs:label xml:lang="en">Type</rdfs:label>
         <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
-        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.opensilex.org/vocabulary/oeso-core#hasDate">
+        <rdfs:label xml:lang="fr">date</rdfs:label>
+        <rdfs:label xml:lang="en">date</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
 
