@@ -190,14 +190,6 @@ The event Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/by
     </owl:Class>
     
 
-
-    <!-- http://www.opensilex.org/vocabulary/oeev#AssociatedTo -->
-
-    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#AssociatedTo">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#ScientificObjectManagement"/>
-        <rdfs:label xml:lang="en">Associated to</rdfs:label>
-        <rdfs:label xml:lang="fr">Associé avec</rdfs:label>
-    </owl:Class>
     
 
 
