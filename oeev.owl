@@ -67,6 +67,7 @@ The event Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/by
 
     <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeev#associatedToASensor">
         <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#associatedTo"/>
+        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeev#AssociatedToASensor"/>
         <rdfs:label xml:lang="en">associated to a sensor</rdfs:label>
         <rdfs:label xml:lang="fr">associé avec un capteur</rdfs:label>
     </owl:ObjectProperty>
