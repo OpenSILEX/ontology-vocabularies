@@ -320,6 +320,15 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
     
 
 
+    <!-- http://www.opensilex.org/vocabulary/oeso#hasPlantMaterialLot -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso#hasPlantMaterialLot">
+        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso#Accession"/>
+        <rdfs:range rdf:resource="http://www.opensilex.org/vocabulary/oeso#PlantMaterialLot"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.opensilex.org/vocabulary/oeso#hasRelatedProject -->
 
     <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso#hasRelatedProject">
