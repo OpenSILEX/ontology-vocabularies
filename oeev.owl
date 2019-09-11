@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<rdf:RDF
+<rdf:RDF xmlns="http://www.opensilex.org/vocabulary/oeev#"
      xml:base="http://www.opensilex.org/vocabulary/oeev"
      xmlns:oeev="http://www.opensilex.org/vocabulary/oeev#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -57,7 +57,6 @@ The event Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/by
     <!-- http://www.opensilex.org/vocabulary/oeev#associatedTo -->
 
     <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeev#associatedTo">
-        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeev#AssociatedTo"/>
         <rdfs:label xml:lang="en">associated to</rdfs:label>
         <rdfs:label xml:lang="fr">associé avec</rdfs:label>
     </owl:ObjectProperty>
@@ -190,13 +189,13 @@ The event Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/by
     </owl:Class>
     
 
-    
-
 
     <!-- http://www.opensilex.org/vocabulary/oeev#AssociatedToASensor -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#AssociatedToASensor">
-        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#AssociatedTo"/>
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#FacilityManagement"/>
+        <rdfs:label xml:lang="fr">Associé à un capteur</rdfs:label>
+        <rdfs:label xml:lang="en">associated to a sensor</rdfs:label>
     </owl:Class>
     
 
