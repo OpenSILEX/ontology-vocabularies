@@ -54,6 +54,26 @@ The event Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/by
     
 
 
+    <!-- http://www.opensilex.org/vocabulary/oeev#associatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeev#associatedTo">
+        <rdfs:label xml:lang="en">associated to</rdfs:label>
+        <rdfs:label xml:lang="fr">associé avec</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#associatedToASensor -->
+
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeev#associatedToASensor">
+        <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#associatedTo"/>
+        <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeev#AssociatedToASensor"/>
+        <rdfs:label xml:lang="en">associated to a sensor</rdfs:label>
+        <rdfs:label xml:lang="fr">associé avec un capteur</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.opensilex.org/vocabulary/oeev#concerns -->
 
     <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeev#concerns">
@@ -167,6 +187,16 @@ The event Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/by
         <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#ScientificObjectManagement"/>
         <rdfs:label xml:lang="en">Adding product</rdfs:label>
         <rdfs:label xml:lang="fr">Ajout de produit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeev#AssociatedToASensor -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeev#AssociatedToASensor">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeev#FacilityManagement"/>
+        <rdfs:label xml:lang="fr">Associé à un capteur</rdfs:label>
+        <rdfs:label xml:lang="en">associated to a sensor</rdfs:label>
     </owl:Class>
     
 
