@@ -196,7 +196,7 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
     
 
 
-   <!-- http://www.opensilex.org/vocabulary/oeso#hasCoordinator -->
+    <!-- http://www.opensilex.org/vocabulary/oeso#hasCoordinator -->
 
     <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso#hasCoordinator">
         <rdfs:subPropertyOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#hasContact"/>
@@ -291,7 +291,7 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
     
 
 
-  <!-- http://www.opensilex.org/vocabulary/oeso#hasRelatedProject -->
+    <!-- http://www.opensilex.org/vocabulary/oeso#hasRelatedProject -->
 
     <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso#hasRelatedProject">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
@@ -300,9 +300,9 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
         <rdfs:label xml:lang="fr">projet associé</rdfs:label>
         <rdfs:label xml:lang="en">related projet</rdfs:label>
     </owl:ObjectProperty>
-
-
     
+
+
     <!-- http://www.opensilex.org/vocabulary/oeso#hasScientificContact -->
 
     <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso#hasScientificContact">
@@ -315,7 +315,7 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-            <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:label xml:lang="fr">contact scientifique</rdfs:label>
         <rdfs:label xml:lang="en">scientific contact</rdfs:label>
     </owl:ObjectProperty>
@@ -336,7 +336,7 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
 
     <!-- http://www.opensilex.org/vocabulary/oeso#hasSpecies -->
 
- <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso#hasSpecies">
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso#hasSpecies">
         <rdfs:range rdf:resource="http://www.opensilex.org/vocabulary/oeso#Species"/>
         <rdfs:label xml:lang="fr">espèce</rdfs:label>
         <rdfs:label xml:lang="en">species</rdfs:label>
@@ -387,7 +387,7 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
 
     <!-- http://www.opensilex.org/vocabulary/oeso#hasUnit -->
 
-   <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso#hasUnit">
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso#hasUnit">
         <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso#Variable"/>
         <rdfs:range rdf:resource="http://www.opensilex.org/vocabulary/oeso#Unit"/>
         <rdfs:label xml:lang="en">unit</rdfs:label>
@@ -425,11 +425,11 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
 
     <!-- http://www.opensilex.org/vocabulary/oeso#measuredVariable -->
 
-   <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso#measuredVariable">
+    <owl:ObjectProperty rdf:about="http://www.opensilex.org/vocabulary/oeso#measuredVariable">
         <rdfs:label xml:lang="en">measured variable</rdfs:label>
         <rdfs:label xml:lang="fr">variable mesurée</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.opensilex.org/vocabulary/oeso#measures -->
@@ -604,7 +604,7 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
     
 
 
- <!-- http://www.opensilex.org/vocabulary/oeso#hasAcronym -->
+    <!-- http://www.opensilex.org/vocabulary/oeso#hasAcronym -->
 
     <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso#hasAcronym">
         <rdfs:domain rdf:resource="http://www.opensilex.org/vocabulary/oeso#Project"/>
@@ -612,7 +612,7 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
         <rdfs:label xml:lang="fr">acronyme</rdfs:label>
         <owl:deprecated xml:lang="fr"></owl:deprecated>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- http://www.opensilex.org/vocabulary/oeso#hasBrand -->
@@ -923,13 +923,13 @@ The Object Ontology is licensed by CC 4.0 (http://creativecommons.org/licenses/b
     
 
 
-  <!-- http://www.opensilex.org/vocabulary/oeso#status -->
+    <!-- http://www.opensilex.org/vocabulary/oeso#status -->
 
     <owl:DatatypeProperty rdf:about="http://www.opensilex.org/vocabulary/oeso#status">
         <rdfs:label xml:lang="en">status</rdfs:label>
         <rdfs:label xml:lang="fr">status</rdfs:label>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- http://www.opensilex.org/vocabulary/oeso#waveband -->
@@ -2416,6 +2416,17 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
     
 
 
+    <!-- http://www.opensilex.org/vocabulary/oeso#Tree -->
+
+    <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Tree">
+        <rdfs:subClassOf rdf:resource="http://www.opensilex.org/vocabulary/oeso#ScientificObject"/>
+        <rdfs:label xml:lang="fr">arbre</rdfs:label>
+        <rdfs:label xml:lang="en">tree</rdfs:label>
+        <skos:note xml:lang="en">skos:closeMatch http://aims.fao.org/aos/agrovoc/c_34134</skos:note>
+    </owl:Class>
+    
+
+
     <!-- http://www.opensilex.org/vocabulary/oeso#Trunc -->
 
     <owl:Class rdf:about="http://www.opensilex.org/vocabulary/oeso#Trunc">
@@ -2536,7 +2547,7 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
     
 
 
-  <!-- 
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -2595,7 +2606,7 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
     
 
 
-    <!-- 
+     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotations
