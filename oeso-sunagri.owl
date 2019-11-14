@@ -2557,12 +2557,32 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
     
 
 
+    <!-- http://www.opensilex.org/vocabulary/oeso#cifresunrinra -->
+
+    <owl:NamedIndividual rdf:about="http://www.opensilex.org/vocabulary/oeso#cifresunrinra">
+        <rdf:type rdf:resource="http://www.opensilex.org/vocabulary/oeso#FinancialFunding"/>
+        <rdfs:label xml:lang="en">CIFRE Sun&apos;R-INRA</rdfs:label>
+        <rdfs:label xml:lang="fr">CIFRE Sun&apos;R-INRA</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.opensilex.org/vocabulary/oeso#europeanfunding -->
 
     <owl:NamedIndividual rdf:about="http://www.opensilex.org/vocabulary/oeso#europeanfunding">
         <rdf:type rdf:resource="http://www.opensilex.org/vocabulary/oeso#FinancialFunding"/>
         <rdfs:label xml:lang="en">European</rdfs:label>
         <rdfs:label xml:lang="fr">Européen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opensilex.org/vocabulary/oeso#fui -->
+
+    <owl:NamedIndividual rdf:about="http://www.opensilex.org/vocabulary/oeso#fui">
+        <rdf:type rdf:resource="http://www.opensilex.org/vocabulary/oeso#FinancialFunding"/>
+        <rdfs:label xml:lang="fr">Fond Unique Interministériel (FUI 18)</rdfs:label>
+        <rdfs:label xml:lang="en">Single Inter-ministry Fund (FUI 18)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2596,7 +2616,7 @@ measured spectral hemispheric directional reflectance percent for each wavelengt
     
 
 
-    <!-- 
+   <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotations
